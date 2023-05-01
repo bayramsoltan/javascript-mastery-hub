@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Literals</title>
+</head>
+<body>
+    
+    <script>
+        const salary = "30000$";
+        const name = "Kevin";
+        const company = "Sony";
+        // const message = name + " started working at " + company + "and his salary is " + salary;
+        // this way is too complicated
+
+        //let's use string interpolation way
+        const message = `${name} started working at ${company} and his salary is ${salary}`//using backtick
+
+        alert(message);
+
+
+        //Backtick is can be useful for using multiline strings
+        const paragraph = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deleniti iste veniam. Voluptates nihil consectetur vero. Nisi quam, porro laudantium illo necessitatibus mollitia. Provident dignissimos, ab architecto perferendis doloribus et.
+    Aperiam consequuntur deserunt quod eveniet consequatur perferendis tenetur placeat debitis cupiditate quasi! Quaerat ea minima illo accusantium rem officiis, ad perferendis perspiciatis ullam maiores earum quisquam deleniti a, eos quo.
+    Voluptatem quae, tenetur nobis sapiente asperiores odio fuga molestiae. Aliquam facere non, in soluta eos corporis distinctio, exercitationem magnam repudiandae quibusdam quia placeat sunt dicta quod. In illum voluptatem aperiam?
+    Voluptatum rerum eum distinctio sapiente, maiores suscipit praesentium, numquam minima excepturi cupiditate corrupti deserunt aliquid sequi at quibusdam aut culpa itaque voluptas reprehenderit totam ab commodi pariatur ut vel. Hic.
+    Esse ex enim ullam dicta ipsum, quo, cupiditate culpa cum earum nostrum unde sed commodi quaerat dolore impedit assumenda. Laborum assumenda repudiandae quasi quos nesciunt, nam accusantium quam eius facilis.
+    Non mollitia possimus, quisquam voluptatum iusto soluta laudantium cupiditate a doloremque aut blanditiis, maxime, autem culpa tempore veniam doloribus minus aspernatur. Esse at deserunt ratione fugiat facilis. Itaque, reprehenderit quas.
+    Eaque beatae magni temporibus voluptatum perspiciatis commodi omnis. In, cum expedita repellat cumque velit porro quia unde saepe harum alias fugit aliquid quo, aut distinctio rerum incidunt libero perferendis quaerat.` 
+    
+
+
+    const newHtml = `
+    
+    <div>
+        <h2>JS </h2>
+        <p>lorem ipsum dolor sit amet</p>
+    </div>
+    `
+
+    document.write(newHtml);
+
+    const y = 7;//const is not changeable
+    console.log(y++);
+
+
+    </script>
+</body>
+</html>
