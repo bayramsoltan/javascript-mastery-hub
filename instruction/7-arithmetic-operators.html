@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operators</title>
+</head>
+<body>
+    <script>
+
+        let num = 16;
+        console.log(num);
+
+
+        num = num ** 2;
+        console.log(num); 
+
+
+        num++; // short of --> num = num + 1
+        console.log(num);
+
+        num = num + 765;
+        console.log(num);
+
+        let result = "5" + num;
+        console.log(result);
+        console.log(typeof result); //it shows string as type
+
+        result = "4" + 5 + 2;
+        console.log(result);  //starts adding from the left and the result is 452
+
+        result = 4 + 3 + "7";
+        console.log(result); //starts from the left and result is 77
+
+        result = 4 + 3 - "7";
+        console.log(result); //it tries to subtract and it wins. The result is 0.
+        // in subtraction it does it like concetenation. there is no problem with subtraction,multiplication 
+
+
+        result = "4" + 3* 7;  //first multiplication
+        console.log(result);  // 421
+        console.log(typeof result); // type is string
+        console.log(isNaN(result));  //false because 421 is number, ignores it's type
+
+    </script>
+</body>
+</html>

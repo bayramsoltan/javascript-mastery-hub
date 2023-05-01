@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Data Types</title>
+</head>
+<body>
+    <script>
+        let age = "22";
+        console.log(age,typeof age);
+
+        age = age + 21;
+        console.log(age,typeof age);
+
+        age = Number(age) + 33; // changing data types
+        console.log(age, typeof age);
+
+        const newAge = prompt("Give me your age?:");
+        console.log(newAge, typeof newAge); // what you take from user by prompt is string
+
+        let oldAge = Number(newAge) + 2;
+        console.log(oldAge, typeof oldAge);
+
+
+        console.log(Number("yyuu221")); // NaN, not a number, it is not error
+
+
+    </script>
+</body>
+</html>
