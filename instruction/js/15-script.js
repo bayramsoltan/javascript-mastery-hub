@@ -22,3 +22,17 @@ const spanEls = document.querySelectorAll("#aboutUs > span");
 console.log(spanEls);
 
 spanEls[0].innerText = "Hello";
+
+
+
+//Taking second element from list and putting that the last element of list
+
+const listItemText = document.querySelector(" .menu li:nth-child(2)").innerText;
+console.log(listItemText);
+document.querySelector(" .menu li:nth-child(2)").innerText += `${listItemText}`;
+
+
+const listItem4El = document.querySelector(" .menu li:nth-child(4)").innerText;
+
+
+//
