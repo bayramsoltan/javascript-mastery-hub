@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 10;
+        a = null;//not works
+        a = undefined;//not works
+        a = " ";
+        a = "";//not works
+        a = 0;
+        a = 1;
+        a = false;//not works
+        a = true;
+        a = NaN;//not works
+        a = {salary:5000};
+        a = {};
+        a = [];
+        a = ["welbeck","raheem"];
+        a = Infinity;
+
+        if (a){
+            console.log("works");
+        }
+    </script>
+</body>
+</html>
