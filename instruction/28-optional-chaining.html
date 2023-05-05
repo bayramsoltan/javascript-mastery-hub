@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining</title>
+</head>
+<body>
+    <Script>
+        //object creation
+
+        const user = {
+            name:'Bayram',
+            age: '22',
+            salary:{//object inside object
+                amount:4000,
+                currency:'TL',
+                tax:15
+            }
+        }
+
+        console.log(user);
+        console.log(user.salary);
+        console.log(user.salary.currency);
+        console.log(user.salary.type);
+        console.log(user.address); //undefined
+        console.log(user.address.city)//error
+        
+        //oldway before optional chaining
+        if(user.address){
+            console.log(user.adress.city);
+        }
+        console.log(user.address?.city)//optional chaining - gives undefined
+    </Script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish Coalesing</title>
+</head>
+<body>
+    <script>
+
+        let salary;
+
+        alert(salary ?? 15000);
+        //nullish works in null or undefined conditions
+
+
+        //ternary
+        alert(salary !==null && salary !== undefined ? salary :15000);
+
+        //if
+        if(salary !== null && salary !== undefined) {
+            alert(salary);
+        }
+
+        //nullish
+        salary ?? alert("no way");
+
+        //short circuit
+        salary ||alert("no way 2"); //if salary is 0 ;alert works
+
+    </script>
+</body>
+</html>
