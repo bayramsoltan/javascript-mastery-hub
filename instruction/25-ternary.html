@@ -7,8 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="number" id="txtSalary" oninput="setSalary">
-    <input type="radio" id="rdRetired" name="status">
+    <input type="number" id="txtSalary" oninput="setSalary()">
+    <input type="radio" id="rdRetired" onchange="setSalary()" name="status">
     <label for="rdRetired">Retired</label>
     <input type="radio" id="rdEmployee" name="status">
     <label for="rdEmployee">Employee</label>
