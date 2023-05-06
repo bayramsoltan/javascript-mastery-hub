@@ -18,6 +18,7 @@ h1{
     padding: 10px;
     color: white;
     text-align: end;
+    text-shadow: 2px -1px 22px rgb(255, 255, 255);
 }
 .container .numbers{
     display: flex;
@@ -38,9 +39,13 @@ h1{
     color:white;
     font-weight: 800;
     font-family: 'Source Code Pro', monospace;
+    text-shadow: 2px -1px 22px rgb(0, 0, 0);
 }
 .container .numbers button:hover{
     transform: scale(1.2);
     color: #3a7999;
     background: rgba(0,0,0,0);
+}
+.container .numbers button.equals{
+    background-color: #af5080;
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop Practice</title>
+</head>
+<body>
+
+    <input type="number" id="txtNumber">
+    <button onclick="calculate()">Calculate</button>
+
+    
+<script>
+
+    //adding digits of a number
+
+        const txtNumber = document.querySelector("#txtNumber");
+
+        function calculate(){
+            let num =Math.abs(txtNumber.value);//taking absolute value of number if it is minus
+            let total = 0;// giving value as 0 not to see undefined;
+
+            while(num>0){
+                const digit = num%10;
+                total += digit; // total = total + digit;
+                num = Math.floor(num/10);
+            }
+            alert(total);
+        }
+
+        function calculate2(){
+            let num = String(Math.abs(txtNumber.value));
+            let total = 0;
+
+            let sayac = 0;
+
+            while(sayac<num.length){
+                total += parseInt(num.substring(sayac,sayac+1));//changing type with parseInt
+                sayac++;
+            }
+            alert(total);
+        }
+</script>
+</body>
+</html>
