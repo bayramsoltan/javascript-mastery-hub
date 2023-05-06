@@ -4,9 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Do While Loop</title>
 </head>
 <body>
-    
+    <script>
+        function calculate(numParam){
+            num = num ===0 ? 1 : num;
+            if(!num || isNaN(num) ||num<0){
+                alert("Enter not negative real number");
+                return;
+            }
+
+            let factorial = 1;
+            //5! = 5*4*3*2*1
+
+            do{
+                factorial = factorial * num;
+                num--;
+            }
+            while(num>0)
+                alert(factorial);
+            
+        }
+
+    </script>
 </body>
 </html>
