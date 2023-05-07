@@ -11,14 +11,53 @@ div.container{
     background-color: #253356;
     border-radius: 10px;
     margin: 50px;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    position: relative;
 }
+
 h1{
+    color: aliceblue;
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin: 20px;
+}
+h2{
     background-color: #af5080;
     padding: 10px;
     color: white;
     text-align: end;
+    font-size: xx-large;
     text-shadow: 2px -1px 22px rgb(255, 255, 255);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.all-clear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#af5080;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 38px, rgba(0, 0, 0, 0.22) 0px 10px 12px;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    font-size: large;
+    cursor: pointer;
+    color:white;
+    font-weight: 800;
+    font-family: 'Source Code Pro', monospace;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    right: 32px;
+    top: 65px;
+}
+.all-clear:hover{
+    transform: scale(1.2);
+    color: #3a7999;
+    background: rgba(0,0,0,0);
 }
 .container .numbers{
     display: flex;
@@ -26,20 +65,26 @@ h1{
     align-items: center;
     justify-content: center;
     padding-bottom: 20px;
+    padding-top:20px;
 }
 .container .numbers button{
     background-color:#00566d;
     border: none;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 50%;
     padding: 20px;
     margin: 3px;
+    width: 50px;
+    height: 50px;
     font-size: larger;
     cursor: pointer;
     color:white;
     font-weight: 800;
     font-family: 'Source Code Pro', monospace;
-    text-shadow: 2px -1px 22px rgb(0, 0, 0);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 .container .numbers button:hover{
     transform: scale(1.2);
