@@ -10,22 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 <body>
-    <h1>Simple Calculator</h1>
+    <h1 id="h1">Pretty Calculator</h1>
     <div class="container">
-        <h2 id="result">0</h2>
-        <button class="all-clear" id="clear" onclick="clearAll">AC</button>
+        <h2 id="results">0</h2>
+        <button class="all-clear" id="clear" onclick="clearAll()">AC</button>
         <div class="numbers">
             <div>
                 <button id="seven" value="7">7</button>
                 <button id="eight" value="8">8</button>
                 <button id="nine" value="9">9</button>
-                <button id="plus" value="+">+</button>
+                <button id="plus" value="+" onclick="gon()">+</button>
             </div>
             <div>
                 <button id="four" value="4">4</button>
                 <button id="five" value="5">5</button>
                 <button id="six" value="6">6</button>
-                <button id="minus" value="-">-</button>
+                <button id="minus" value="-" onclick="show()" >-</button>
             </div>
             <div>
                 <button id="one" value="1">1</button>
@@ -37,7 +37,7 @@
                 <button id="zero" value="0">0</button>
                 <button id="dot" value=".">.</button>
                 <button id="divide" value="/">/</button>
-                <button id="equal" value="=" class="equals">=</button>
+                <button id="equal" value="=" class="equals" onclick="alert(this.value)">=</button>
             </div>
         </div>
     </div>

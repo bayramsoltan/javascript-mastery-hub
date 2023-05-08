@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .container{
+        padding: 1rem;
+        background-color: rgb(157, 207, 207);
+        width: 50%;
+    }
+.container input,.container button{
+    padding: 0.5rem;
+    margin: 0.3rem;
+    font-size:1.2rem ;
+}
+.container label{
+    font-size: 1.2rem;
+    margin-right:0.5rem;
+}
+.container #mesaj{
+    margin-top: 2rem;
+    width: 400px;
+    padding: 2rem;
+    color: rgb(4, 0, 7);
+    font-size: 1.5rem;
+    text-align: center;
+}
+.yesil{
+    background-color: green;
+}
+.kirmizi{
+    background-color: red;
+}
+.sari{
+    background-color: rgb(233, 233, 11);
+}
+.invisible{
+    display: none;
+}
+</style>
+<body>
+    <div class="container">
+        <input type="number" id="yas" placeholder="enter your age">
+
+        <input type="radio" name="gender" id="male" checked><!--name need to be same in both in order to accept one of them-->
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+
+        <button type="button" onclick="condition()">Military Condition</button>
+        <button type="button" onclick="clear()">Clear</button>
+        <p id="mesaj" class="invisible">Sonuc</p>
+    </div>
+<script src="js/practice-09.js"></script>
+</body>
+</html>

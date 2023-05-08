@@ -1,13 +1,24 @@
+const minusSign = document.getElementById("minus");
 
-//numbers
-let number7 = 7;
-number7 = document.querySelector("#seven");
-
-function show7(){
-    console.log(number7);
+  function show(){
+    results.innerHTML = minusSign.value;
 }
 
+const plusSign = document.querySelector("#plus");
+
+function gon(){
+    results.innerHTML = plusSign.value;
+}
+
+const aC = document.querySelector("#clear");
+function clearAll(){
+    results.innerHTML = 0;
+}
+
+
+//numbers
 const number8 = document.querySelector("#eight");
+
 const number9 = document.querySelector("#nine");
 const number6 = document.querySelector("#six");
 const number5 = document.querySelector("#five");
@@ -18,8 +29,7 @@ const number1 = document.querySelector("#one");
 const number0 = document.querySelector("#zero");
 
 //signs
-const plusSign = document.querySelector("#plus");
-const minusSign = document.querySelector("#minus");
+
 const multiplySign = document.querySelector("#multiply");
 const divideSign = document.querySelector("#divide");
 const dotSign = document.querySelector("#dot");
