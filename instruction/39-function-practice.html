@@ -7,7 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+
+    <button onclick="setPrice()">Set Price</button>
     <script>
+
+        const setPrice = () =>{
+            const price = prompt("Please enter the price");
+            const totalPrice = getPrice(price,25,18);
+            alert(`The final price is ${totalPrice}`);
+        }
+
         const getPrice = (price,discountRate,taxRate) =>{
             if(!price || isNaN(price) || price<0) return;
             if(!discountRate || isNaN(discountRate)) discountRate=0;

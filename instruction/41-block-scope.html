@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        let x1 = 5;
+
+        const setNum1 =()=>{
+            let x1 =11; //in different scope you can define variable with same name
+            console.log(x1);
+        }
+        setNum1();
+        console.log(++x1);
+    </script>
+</body>
+</html>
