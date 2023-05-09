@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+    <button id="btnSayHello" onclick="sayHello1()">Say Hello</button>
+    <button id="btnSayHello2"></button>
+    <button id="btnSayHello3"></button>
+    <script>
+        //1.way
+        function sayHello1(){
+            alert("Hello");
+        }
+
+        //2.way
+        const sayHello2 = () =>{
+            alert("Hello");
+        }
+
+        document.querySelector("#btnSayHello2").onclick = sayHello2; //sayHello2(); don't do this
+
+        //3.way
+        document.querySelector("#btnSayHello2").onclick = function(){ // arrow function = () => {}
+            alert("Hello");
+        }
+
+       
+        //4.way
+ const sayHello4 = function(){
+            alert("Hello");
+        }
+
+        document.querySelector("#btnSayHello4").addEventListener("click",sayHello4);
+        //5.way
+
+        document.querySelector("#btnSayHello5").addEventListener("click",function(){
+            alert("Hello2");
+        });
+    </script>
+</body>
+</html>
