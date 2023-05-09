@@ -16,28 +16,28 @@
         <button class="all-clear" id="clear" onclick="clearAll()">AC</button>
         <div class="numbers">
             <div>
-                <button id="seven" value="7">7</button>
-                <button id="eight" value="8">8</button>
-                <button id="nine" value="9">9</button>
-                <button id="plus" value="+" onclick="gon()">+</button>
+                <button value="7" onclick="onScreen(this.value)">7</button>
+                <button value="8" onclick="onScreen(this.value)">8</button>
+                <button value="9" onclick="onScreen(this.value)">9</button>
+                <button value="+" onclick="onScreen(value)">+</button>
             </div>
             <div>
-                <button id="four" value="4">4</button>
-                <button id="five" value="5">5</button>
-                <button id="six" value="6">6</button>
-                <button id="minus" value="-" onclick="show()" >-</button>
+                <button value="4" onclick="onScreen(value)">4</button>
+                <button value="5" onclick="onScreen(value)">5</button>
+                <button value="6" onclick="onScreen()">6</button>
+                <button value="-" onclick="onScreen()">-</button>
             </div>
             <div>
-                <button id="one" value="1">1</button>
-                <button id="two" value="2">2</button>
-                <button id="three" value="3">3</button>
-                <button id="multiply" value="*">*</button>
+                <button value="1" onclick="onScreen()">1</button>
+                <button value="2" onclick="onScreen()">2</button>
+                <button value="3" onclick="onScreen()">3</button>
+                <button value="*" onclick="onScreen()">*</button>
             </div>
             <div>
-                <button id="zero" value="0">0</button>
-                <button id="dot" value=".">.</button>
-                <button id="divide" value="/">/</button>
-                <button id="equal" value="=" class="equals" onclick="alert(this.value)">=</button>
+                <button value="0" onclick="onScreen()">0</button>
+                <button value="." onclick="onScreen()">.</button>
+                <button value="/" onclick="onScreen()">/</button>
+                <button value="=" class="equals" onclick="calculateResult()">=</button>
             </div>
         </div>
     </div>

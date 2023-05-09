@@ -1,39 +1,75 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Simple Calculator</title>
-    <script>
-      function calculate() {
-        var num1 = parseFloat(document.getElementById("num1").value);
-        var num2 = parseFloat(document.getElementById("num2").value);
-        var operator = document.getElementById("operator").value;
-        var result;
+<head>
+  <title>JavaScript Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-        if (operator === "+") {
-          result = num1 + num2;
-        } else if (operator === "-") {
-          result = num1 - num2;
-        } else if (operator === "*") {
-          result = num1 * num2;
-        } else if (operator === "/") {
-          result = num1 / num2;
-        }
+    .calculator {
+      width: 200px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f7f7f7;
+    }
 
-        document.getElementById("result").innerHTML = result;
-      }
-    </script>
-  </head>
-  <body>
-    <h1>Simple Calculator</h1>
-    <input type="number" id="num1" placeholder="Enter number 1" /><br />
-    <input type="number" id="num2" placeholder="Enter number 2" /><br />
-    <select id="operator">
-      <option value="+">+</option>
-      <option value="-">-</option>
-      <option value="*">*</option>
-      <option value="/">/</option>
-    </select><br />
-    <button onclick="calculate()">Calculate</button>
-    <p id="result"></p>
-  </body>
+    .calculator input[type="text"] {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 5px;
+      font-size: 18px;
+    }
+
+    .calculator input[type="button"] {
+      width: 48%;
+      padding: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="result" readonly>
+    <input type="button" value="7" onclick="appendToResult('7')">
+    <input type="button" value="8" onclick="appendToResult('8')">
+    <input type="button" value="9" onclick="appendToResult('9')">
+    <input type="button" value="+" onclick="appendToResult('+')">
+    <br>
+    <input type="button" value="4" onclick="appendToResult('4')">
+    <input type="button" value="5" onclick="appendToResult('5')">
+    <input type="button" value="6" onclick="appendToResult('6')">
+    <input type="button" value="-" onclick="appendToResult('-')">
+    <br>
+    <input type="button" value="1" onclick="appendToResult('1')">
+    <input type="button" value="2" onclick="appendToResult('2')">
+    <input type="button" value="3" onclick="appendToResult('3')">
+    <input type="button" value="*" onclick="appendToResult('*')">
+    <br>
+    <input type="button" value="0" onclick="appendToResult('0')">
+    <input type="button" value="." onclick="appendToResult('.')">
+    <input type="button" value="=" onclick="calculateResult()">
+    <input type="button" value="/" onclick="appendToResult('/')">
+    <br>
+    <input type="button" value="C" onclick="clearResult()">
+  </div>
+
+  <script>
+  var resultField = document.getElementById("result");
+    function appendToResult(value) {
+      resultField.value += value;
+    }
+
+    function calculateResult() {
+      var result = eval(resultField.value);
+      resultField.value = result;
+    }
+
+    function clearResult() {
+      resultField.value = "";
+    }
+    
+  </script>
+</body>
 </html>
