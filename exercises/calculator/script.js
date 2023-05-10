@@ -1,9 +1,12 @@
+let sums = 0;
 function onScreen(){
     
 }
 
-function clearAll(){
 
+
+function clearAll(){
+    results.innerHtml = "0";
 }
 
 function calculateResult(){
