@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Methods</title>
+</head>
+<body>
+
+
+    <script>
+        const car1 = {
+            brand:"Audi",
+            model:"A7",
+            color:"red",
+            model:"A9" // overwrites model as A9 because that is last one
+        };
+        console.log(car);
+        const car2 = {
+            brand:"Mercedes",
+            year:"2014"
+        }
+        Object.assign(car1,car2);
+        console.log(car1);
+        console.log(car1===car2);
+
+        const car3 =Object.assign({},car1);//to create copy -shallow copy- object assign is used
+        console.log(car3);
+        
+    </script>
+</body>
+</html>
