@@ -23,7 +23,7 @@ const getSymbol = () => {
   return symbol[Math.floor(Math.random() * symbol.length)];
 };
 const passwordGenerate = () => {
-  let passwordLength = pwdLengthEl.value;
+  let passwordLength = pwdLengthEl.value; 
   let password = "";
   if (upperCaseEl.checked) {
     password += getUpperCase();
