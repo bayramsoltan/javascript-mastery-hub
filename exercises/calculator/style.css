@@ -12,7 +12,6 @@ div.container{
     border-radius: 10px;
     margin: 50px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    position: relative;
 }
 
 h1{
@@ -22,13 +21,14 @@ h1{
 }
 h2{
     background-color: #af5080;
-    padding: 10px;
+    padding: 30px;
     color: white;
     text-align: end;
     font-size: xx-large;
     text-shadow: 2px -1px 22px rgb(255, 255, 255);
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    word-wrap: break-word;
 }
 .all-clear{
     display: flex;
@@ -50,9 +50,8 @@ h2{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    position: absolute;
-    right: 32px;
-    top: 65px;
+    position: relative;
+    left: 230px;
 }
 .all-clear:hover{
     transform: scale(1.2);
@@ -65,7 +64,6 @@ h2{
     align-items: center;
     justify-content: center;
     padding-bottom: 20px;
-    padding-top:20px;
 }
 .container .numbers button{
     background-color:#00566d;

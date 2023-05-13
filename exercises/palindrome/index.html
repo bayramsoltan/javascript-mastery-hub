@@ -1,0 +1,78 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="numPa">
+    <button id="btnCheck">Check</button>
+
+    <script>
+        const numPa = document.querySelector("#numPa");
+
+        document.querySelector("#btnCheck").addEventListener("click",function(){
+            const result = isPalindrome(txtNum.value);
+            if (result==reverse){
+               alert("This number is Palindrome");
+            }else{
+                 alert("This number is not Palindrome");
+            }
+        });
+
+        const isPalindrome = (num)=>{
+            let a = result.toString().length-1;
+            let c= 0;
+            for (let i = 0; i++; i=a){
+                c += num%10;
+                reverseNum *=10 + c;
+            }
+            return reverseNum;
+        }
+
+
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="numPa">
+    <button id="btnCheck">Check</button>
+
+    <script>
+        document.querySelector("#btnCheck").addEventListener("click", function() {
+            const number = document.querySelector("#numPa").value;
+            const result = isPalindrome(number);
+
+            if (result == number) {
+                alert("This number is a palindrome");
+            } else {
+                alert("This number is not a palindrome");
+            }
+        });
+
+        const isPalindrome = (num) => {
+            let reverseNum = 0;
+            let originalNum = num;
+
+            while (num > 0) {
+                reverseNum = (reverseNum * 10) + (num % 10);
+                num = Math.floor(num / 10);
+            }
+
+            return reverseNum;
+        }
+    </script>
+</body>
+</html>
