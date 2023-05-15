@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="welcomeText">Welcome to my web app</h1>
+
+    <article></article>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum repellendus harum temporibus recusandae fugiat officia vel officiis sapiente porro sunt corrupti, qui praesentium consequatur non corporis repudiandae deserunt et nemo!
+    Excepturi ab natus voluptate neque commodi facilis rerum, provident recusandae maxime. Quisquam accusantium nemo dicta minus deleniti, dolor, nobis labore, consequatur aspernatur quae fugiat minima error odio delectus illo reiciendis?
+    Provident impedit, vero mollitia dolorem tempora iste, inventore repudiandae aliquid unde ipsam sunt ut explicabo natus in veniam dicta, ab libero blanditiis ipsum! Pariatur doloribus quam in inventore reprehenderit possimus.
+    Velit delectus, praesentium sapiente veritatis perferendis quos iste nihil totam deserunt dolor adipisci obcaecati eaque labore fuga! Commodi id libero tempora minima corrupti quisquam molestias earum! Cupiditate iure facere nulla?
+    Dignissimos eveniet tenetur hic placeat, deleniti reiciendis magni quia, illum officia corrupti cupiditate minus! Alias nobis accusamus veniam beatae numquam obcaecati nulla possimus. Esse sunt veritatis nesciunt vitae laudantium. Adipisci.
+    Animi odit voluptate minima voluptatibus laudantium doloremque fugit ipsam dolorum est iste cumque in, dolor, aut, reiciendis obcaecati quasi. Atque voluptas itaque illo voluptates sunt magnam quos officiis. Aut, est?
+    Eos eveniet blanditiis veritatis, alias sequi nesciunt saepe fugit eius accusamus excepturi perspiciatis aliquid natus minima quaerat consequuntur repellendus quibusdam sapiente reiciendis dolorem nam beatae aut animi! Nostrum, a vero.
+    Maiores dolorem accusamus culpa quod ab inventore eos modi magni id vero, nisi voluptatibus sit nulla magnam voluptas molestiae accusantium sapiente sed dolores non ut. Architecto modi consequatur eaque voluptatem.
+    Optio enim asperiores illum repellendus atque ipsam veniam, quaerat quae vel laboriosam expedita hic ratione nesciunt officia eveniet? Possimus cumque autem et quisquam placeat at reiciendis suscipit ex ipsum voluptatum.</p>
+
+
+    <script>
+        const welcomeTextEl= document.getElementById("welcomeText");
+        welcomeTextEl.innerHTML += "+";
+//getElementByTagName always returns array
+        const articleEls = document.getElementsByTagName("article");
+        articleEls[0].innerHTML = "Hi"
+
+        //getElementsByClassName returns array
+        const contactEls = document.getElementsByClassName("contact");
+        contactEls[0].innerHTML = "Hello";
+
+
+    </script>
+</body>
+</html>
