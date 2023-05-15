@@ -38,6 +38,18 @@
 </html> -->
 
 
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,29 +63,6 @@
     <button id="btnCheck">Check</button>
 
     <script>
-        // document.querySelector("#btnCheck").addEventListener("click", function() {
-        //     const number = document.querySelector("#numPa").value;
-        //     const result = isPalindrome(number);
-
-        //     if (result == number) {
-        //         alert("This number is a palindrome");
-        //     } else {
-        //         alert("This number is not a palindrome");
-        //     }
-        // });
-
-        // const isPalindrome = (num) => {
-        //     let reverseNum = 0;
-        //     let originalNum = num;
-
-        //     while (num > 0) {
-        //         reverseNum = (reverseNum * 10) + (num % 10);
-        //         num = Math.floor(num / 10);
-        //     }
-
-        //     return reverseNum;
-        // }
-
 
         const numPa = document.querySelector("#numPa").value;
 
@@ -87,15 +76,38 @@ document.querySelector("#btnCheck").addEventListener("click",function(){
 });
 
 const isPalindrome = (num)=>{
-    let a = result.toString().length-1;
+
     let c= 0;
-    for (let i = 0; i++; i=a){
+    for (let i = ;i>0; i++){
         c += num%10;
         reverseNum *=10 + c;
+        console.log(a);
     }
     return reverseNum;
 }
 
+    </script>
+</body>
+</html> --> 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        let a = 67;
+        let b = 44;
+        let c = a + b;
+
+        console.log(c);
     </script>
 </body>
 </html>
