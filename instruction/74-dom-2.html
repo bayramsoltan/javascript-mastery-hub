@@ -39,6 +39,14 @@
         // childNodes
         // içinde element, text, attribute, comment gibi çok farklı yapıları bulundurur.
         console.log(employeeList.childNodes);
+
+        console.log(employeeList.firstElementChild);
+        console.log(employeeList.lastElementChild);
+        console.log(employeeList.parentElement);
+
+        const li3 =document.querySelector("#employeeList li:nth-child(3)");
+        console.log(li3.previousElementSibling);
+        console.log(li3.nextElementSibling);
     </script>
 </body>
 </html>
