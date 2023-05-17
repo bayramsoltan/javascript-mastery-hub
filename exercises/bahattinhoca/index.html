@@ -9,28 +9,53 @@
 <body>
     <script>
 
+let arr = [1, 2, "bursa", 3, 3, "istanbul", 4, 5, 5, 5, "ankara", 6, 6, 7];
 
-let arr = [1, 2, "bursa", 3, 3, "istanbul", 4, 5, 5, 5, "ankara", 6, 6, 7]
+// for(let i=0; i<arr.length-1; i++){
+// if(arr[i] === arr[i+1]){
+//     arr.splice(i,1);
+// }
+// }
+// console.log(arr);
+
+
 
 // yeni bir newArr oluşturun. çıktısı şu şekilde olmalı -> [1,2,"bursa",3,"istanbul",4,5,"ankara",6,7]
+let newArr = [];
+newArr =  arr.filter(check);
+    
+function check(){
+    for(let i=0; i<arr.length-1; i++){
+    if(arr[i] === arr[i+1]){
+    arr.splice(i,1);
+    }}}
+
+console.log(newArr);
+
 
 // newArr üzerinden iki yeni dizi oluşturun. newArr2 ve newArr3.
+
 // newArr2 [1,2,3,4,5,6,7] döndürmeli
+// let newArr2 = [];
+
+// newArr2 = newArr.map(numberize);
+
+// function numberize(){
+//     for(let i = 0; i<newArr2)
+// }
+
 //newArr3 ["bursa","istanbul","ankara"]  döndürmeli
+// let newArr3 = [];
+
+// newArr3 = newArr.map(letterize);
+
+// function letterize(){
+
+// }
 
 // bu iki diziden newArr4 olusturun. [1,6,"bursa"] şeklinde dönmeli
 
-let newArr = arr.map(for(let i=0; i>newArr.length; i++){
-    if(arr[i] === arr[i+1]){
-    newArr.pop();
-}
-});
 
-
-
-
-
-console.log(newArr);
 
     </script>
 </body>
