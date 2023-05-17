@@ -3,12 +3,10 @@ const btnStart = document.querySelector("#btnStart");
 const btnGuess = document.querySelector("#btnGuess");
 const txtResult =document.querySelector("#txtResult");
 
-
 let randomNumber = 0;
 const minRandomNumber = 1;
 const maxRandomNumber = 100;
 const totalShot = 10;
-
 
 txtNum.setAttribute("placeholder",`Type number between ${minRandomNumber} - ${maxRandomNumber}`)
 
@@ -17,7 +15,6 @@ randomNumber = getRandomNumber();
 txtNum.removeAttribute("disabled");
 txtNum.value = "";
 txtNum.focus();
-
 
 btnGuess.classList.remove("d-none");
 btnStart.innerHTML = "Reset game";

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inName" placeholder="Name">
+    <input type="text" name="" id="inSurname" placeholder="Surname">
+    <input type="number" id="inNot">
+    <button id="add1">Add</button>
+    <script>
+const inName = document.querySelector("#inName").value;
+const inSurname = document.querySelector("#inSurname").value;
+const inNot = document.querySelector("#inNot").value;
+let user =[];
+
+document.querySelector("#add1").addEventListener("click",()=>{
+    console.log(inName);
+    console.log(inSurname);
+    console.log(inNot);
+})
+
+//requirements
+
+// 1. Kullanicinin adini gireceği bir input +
+// 2. Soyadini gireceği bir input  +
+// 3. Kullanicinin not bilgisini gireceği bir input +
+// 4. Ekle butonu + 
+
+// Girilen isim soyismi ve not bilgisi Array Of Object seklinde tutulmalı 
+// Girilen isim , soyismi ve not bilgileri EKLE butonuna tiklandiginda dinamik sekilde oluşturulacak olan tabloya eklenmeli  
+
+
+// Tabloya eklenen bilgilerin yanında sil butonu olmalı ve kullanıcı o hücredeki bilgileri silebilmeli . 
+// Silmek istediğinde uyarı olarak pupop gösterilmeli 
+    </script>
+</body>
+</html>

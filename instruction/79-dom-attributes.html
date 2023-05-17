@@ -37,10 +37,11 @@
         const btnTogglePassword = document.getElementById("btnTogglePassword");
         const txtPassword = document.getElementById("txtPassword");
 
-        txtIdentity.addEventListener("input",(e)=>{
+        txtIdentity.addEventListener("input",(e)=>{ //e-target
             const identityNumber = e.target.value; //yazilan ne ise identityNumber icerisine girer e.target.value ile
             if(identityNumber && identityNumber.length===11){
                 btnUpdate.removeAttribute("disabled");
+                txtIdentity.setAttribute("disabled","")
             }else{
                 btnUpdate.setAttribute("disabled","");// ya da("disabled","disabled")
                 // playstaion.comdaki carouselleri getAttribute ve setAttribute ile yapilabilir
