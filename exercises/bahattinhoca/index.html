@@ -19,7 +19,6 @@ let arr = [1, 2, "bursa", 3, 3, "istanbul", 4, 5, 5, 5, "ankara", 6, 6, 7];
 // console.log(arr);
 
 
-
 // yeni bir newArr oluşturun. çıktısı şu şekilde olmalı -> [1,2,"bursa",3,"istanbul",4,5,"ankara",6,7]
 let newArr = [];
 newArr =  arr.filter(check);
@@ -28,7 +27,9 @@ function check(){
     for(let i=0; i<arr.length-1; i++){
     if(arr[i] === arr[i+1]){
     arr.splice(i,1);
-    }}}
+    
+}}return arr;
+}
 
 console.log(newArr);
 
