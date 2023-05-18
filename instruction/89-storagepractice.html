@@ -7,7 +7,40 @@
     <title>Storage</title>
 </head>
 <body>
-    <h1>Welcome to my app</h1>
-    <script></script>
+    <h1 id="lblWelcomeMessage"></h1>
+    <p><em id="lblCounter"></em></p>
+
+    <form action="">
+        <input type="text" id="txtName">
+        <button id="btnSave">Save</button>
+    </form>
+
+    <script>
+        const handleCounter =()=>{
+            let count = localStorage.getItem("pageCounter");
+            console.log(count);
+            //count = count ? parseInt(count):0;
+            //count = count ?? 0;
+            count ??= 0;
+            count++;
+            localStorage.setItem("pageCounter",count);
+
+            document.getElementById("lblCounter").innerHTML = `You have entered ${count} times to this page`
+        }
+        const handleMessage = ()=>{
+            const name = localStorage.getItem("name");
+            document.getElementById("lblWelcomeMessage").innerHTML = `Welcome to my website, ${name ?? "Guest"}`//if it is null write Guest on name place
+        }
+        
+
+
+        document.getElementById("btnSave").addEventListener("click",()=>{
+            const txtName = document.getElementById("txtName");
+            localStorage.setItem("name",txtName.value);
+        })
+
+        handleCounter();
+        handleMessage();
+    </script>
 </body>
 </html>
