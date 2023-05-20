@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback</title>
+  </head>
+  <body>
+    <script>
+      const siparisVer = (callback) => {
+        console.log("Siparis verdik");
+        setTimeout(() => {
+          console.log("Siparis tamamlandi");
+          callback("lahmacun");
+        }, 4000);
+      };
+
+      console.log("AVM'ye gittik");
+      console.log("Kıyavet alamadık");
+      console.log("Acıktım");
+
+      siparisVer((food) => {
+        console.log(food);
+        console.log("Doyduk");
+      });
+
+      console.log("biraz sohbet ettik");
+    </script>
+  </body>
+</html>
