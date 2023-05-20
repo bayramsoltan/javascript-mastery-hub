@@ -9,7 +9,7 @@ function ustAl(){
     const tabanEl=document.querySelector("#taban").value
     const ustEl=document.querySelector("#ust").value
 
-    const sonuc= Number(tabanEl**ustEl);
+    const sonuc= tabanEl**ustEl;
 
     const msgSonuc=document.querySelector(".sonuc");
 
