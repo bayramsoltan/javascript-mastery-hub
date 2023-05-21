@@ -4,15 +4,18 @@ const lblLife = document.getElementById("lblLife");
 const lblHeart = document.getElementById("lblheart");
 const btnStart = document.querySelector("#btnStart");
 const btnGuess = document.querySelector("#btnGuess");
-
-//random number between 1-100
-let sayi = Math.floor(Math.random() * (100)) + 1;
 let counter = lblLife.innerText;
+let sayi = 0;
+//random number between 1-100
+
+function randomNumber(){
+return sayi = Math.floor(Math.random() * (100)) + 1;
+}
 
 console.log(sayi);
 
-btnStart.addEventListener("click",()=>{
-    btnGuess.classList.remove("d-none");
+function start(){
+     btnGuess.classList.remove("d-none");
     lblLife.classList.remove("d-none");
     intInput.classList.remove("d-none");
     intInput.removeAttribute("disabled");
@@ -21,6 +24,22 @@ btnStart.addEventListener("click",()=>{
     lblResult.classList.add("text-light");
     lblResult.innerText = "";
     lblLife.innerText = 10;
+    counter = 10;
+    randomNumber();
+}
+
+
+function endGame(){
+    btnGuess.classList.add("d-none");
+    lblLife.classList.add("d-none");
+    intInput.classList.add("d-none");
+    btnStart.innerText = "Play Again";
+    btnStart.classList.remove("d-none");
+    lblHeart.classList.add("d-none");
+}
+
+btnStart.addEventListener("click",()=>{
+    start();
 })
 
 btnGuess.addEventListener("click",()=>{
@@ -30,12 +49,7 @@ btnGuess.addEventListener("click",()=>{
         lblLife.innerText = counter;
         if(counter === 0){
             lblResult.innerText = "You lost 💔";
-            btnGuess.classList.add("d-none");
-            lblLife.classList.add("d-none");
-            intInput.classList.add("d-none");
-            btnStart.innerText = "Play Again";
-            btnStart.classList.remove("d-none");
-            lblHeart.classList.add("d-none");
+            endGame();
         }
         
     }else if(intInput.value > sayi){
@@ -45,25 +59,13 @@ btnGuess.addEventListener("click",()=>{
         lblLife.innerText = counter;
         if(counter === 0){
             lblResult.innerText = "You lost 💔";
-            lblResult.classList.remove("text-light");
-            lblResult.classList.add("text-danger");
-            btnGuess.classList.add("d-none");
-            lblLife.classList.add("d-none");
-            intInput.classList.add("d-none");
-            btnStart.innerText = "Play Again";
-            btnStart.classList.remove("d-none");
-            lblHeart.classList.add("d-none");
+            endGame();
         }
         
 
     }else{
         lblResult.innerText = "You Guessed! 🎯";
-        btnGuess.classList.add("d-none");
-        lblLife.classList.add("d-none");
-        intInput.classList.add("d-none");
-        btnStart.innerText = "Play Again";
-        btnStart.classList.remove("d-none");
-        lblHeart.classList.add("d-none");
+        endGame();
     }
         intInput.focus();
         intInput.value = "";
