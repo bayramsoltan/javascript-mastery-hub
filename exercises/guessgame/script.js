@@ -5,14 +5,18 @@ const lblHeart = document.getElementById("lblheart");
 const btnStart = document.querySelector("#btnStart");
 const btnGuess = document.querySelector("#btnGuess");
 let counter = lblLife.innerText;
-let sayi = 0;
+// let sayi = 0;
 //random number between 1-100
 
-function randomNumber(){
-return sayi = Math.floor(Math.random() * (100)) + 1;
+const randomNumber = ()=>{
+    return Math.floor(Math.random() * (100)) + 1;
 }
+let sayi = randomNumber();
+// function randomNumber(){
+// return sayi = Math.floor(Math.random() * (100)) + 1;
+// }
 
-console.log(sayi);
+console.log(randomNumber());
 
 function start(){
      btnGuess.classList.remove("d-none");
@@ -43,7 +47,7 @@ btnStart.addEventListener("click",()=>{
 })
 
 btnGuess.addEventListener("click",()=>{
-    if (intInput.value < sayi){
+    if (intInput.value < randomNumber()){
         lblResult.innerText = "Too small. Guess higher 👍";
         counter--;
         lblLife.innerText = counter;
@@ -52,7 +56,7 @@ btnGuess.addEventListener("click",()=>{
             endGame();
         }
         
-    }else if(intInput.value > sayi){
+    }else if(intInput.value > randomNumber()){
         lblResult.innerText = "Too big. Guess lower 👎!";
         
         counter--;
