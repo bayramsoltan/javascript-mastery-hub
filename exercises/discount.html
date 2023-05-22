@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discount</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <input type="text" id="inputDO">
-    <button id="btnDO">Do</button>
-    <ul>
-        <li>Notebook 1500</li>
-        <li>Phone 1300</li>
-        <li>Headphone 60</li>
-        <li>TV 3000</li>
-    </ul>
-    <script>
-        const inputDo = document.querySelector("#inputDO");
-    </script>
+  <input type="text" id="numPa">
+  <button id="btnCheck">Check</button>
+
+  <script>
+    document.querySelector("#btnCheck").addEventListener("click", function () {
+      const numPa = document.querySelector("#numPa").value;
+
+      const result = isPalindrome(numPa);
+      if (result === numPa) {
+        alert("This number is a palindrome");
+      } else {
+        alert("This number is not a palindrome");
+      }
+    });
+
+    const isPalindrome = (num) => {
+      let reverse = 0;
+      let sayac = 0;
+      const numLen = num.length; // Get the length of the number
+      for (let i = 0; i <= numLen - 1; i++) {
+        sayac = num % 10;
+        reverse = reverse * 10 + sayac;
+        num = Math.floor(Number(num / 10));
+      }
+      return reverse;
+    }
+  </script>
 </body>
+
 </html>

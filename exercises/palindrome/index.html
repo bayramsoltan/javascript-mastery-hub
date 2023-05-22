@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    <input type="text" id="numPa">
-    <button id="btnCheck">Check</button>
+  <input type="text" id="numPa">
+  <button id="btnCheck">Check</button>
 
-    <script>
+  <script>
 
-const numPa = document.querySelector("#numPa").value;
-const numLen = numPa.length;
-let reverse = 0;
-let sayac = 0;
-document.querySelector("#btnCheck").addEventListener("click",function(){
+    document.querySelector("#btnCheck").addEventListener("click", function () {
+      const numPa = document.querySelector("#numPa").value;
+      const numLen = numPa.length;
+      const result = isPalindrome(numPa);
 
-    const reverse = isPalindrome(numPa);
-    if (reverse===numPa){
-       alert("This number is Palindrome");
-    }else{
-         alert("This number is not Palindrome");
+      if (result === numPa) {
+        alert("This number is Palindrome");
+      } else {
+        alert("This number is not Palindrome");
+      }
+    });
+
+    const isPalindrome = (num) => {
+      let reverse = 0;
+      let sayac = 0;
+      for (let i = 0; i <= numLen - 1; i++) {
+        sayac = num % 10;
+        reverse *= 10 + sayac;
+        num = Math.floor(Number(num / 10));
+      } 
+      return reverse;
     }
-});
+    //Yanlışın nerede olduğunu çözemedim hocam
 
-const isPalindrome = (num)=>{
-    for(let i=0;i<=numLen-1;i++){
-  sayac = num%10;
-  reverse *=10 + sayac;
-  num= Math.floor(Number(num/10));
-  return reverse;
-}
-}
-    </script>
+  </script>
 </body>
+
 </html>
+
+<!-- let userInput = prompt("Check number palindrome or not?");
+let a = userInput.length;
+let sayac = 0;
+let pol = 0;
+
+for(let i=0;i<=a-1;i++){
+  pol = userInput%10;
+  sayac *=10+pol;
+  userInput= Math.floor(Number(userInput/10));
+  console.log(userInput);
+  console.log(sayac);
+};
+if (userInput===sayac){
+  console.log("This number is palindrome");
+}else{
+console.log("This number is not palindrome");
+} -->
