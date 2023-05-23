@@ -16,9 +16,10 @@
 
     document.querySelector("#btnCheck").addEventListener("click", function () {
       const numPa = document.querySelector("#numPa").value;
-      const numLen = numPa.length;
+      
       const result = isPalindrome(numPa);
-
+      console.log(result);
+      console.log(numPa);
       if (result === numPa) {
         alert("This number is Palindrome");
       } else {
@@ -27,11 +28,12 @@
     });
 
     const isPalindrome = (num) => {
+      const numLen = numPa.length;
       let reverse = 0;
       let sayac = 0;
       for (let i = 0; i <= numLen - 1; i++) {
         sayac = num % 10;
-        reverse *= 10 + sayac;
+        reverse = (reverse * 10) + sayac;
         num = Math.floor(Number(num / 10));
       } 
       return reverse;

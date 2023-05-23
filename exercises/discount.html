@@ -25,16 +25,16 @@
     });
 
     const isPalindrome = (num) => {
-      let reverse = 0;
-      let sayac = 0;
-      const numLen = num.length; // Get the length of the number
-      for (let i = 0; i <= numLen - 1; i++) {
-        sayac = num % 10;
-        reverse = reverse * 10 + sayac;
-        num = Math.floor(Number(num / 10));
-      }
-      return reverse;
+  let reverse = '';
+  const numLen = num.length; // Get the length of the number
+  for (let i = numLen - 1; i >= 0; i--) {
+    if (num[i] !== '0') {
+      reverse += num[i];
     }
+  }
+  return reverse === num;
+}
+    
 
 
   </script>
