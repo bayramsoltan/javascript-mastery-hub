@@ -1,43 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Palindrome Checker</title>
 </head>
-
 <body>
   <input type="text" id="numPa">
-  <button id="btnCheck">Check</button>
+  <button onclick="checkPalindrome()">Check</button>
 
   <script>
-    document.querySelector("#btnCheck").addEventListener("click", function () {
-      const numPa = document.querySelector("#numPa").value;
+    function checkPalindrome() {
+      const numPaInput = document.getElementById("numPa").value;
+      const numLen = numPaInput.length;
+      let reverse = "";
+      let numbers = Number(numPaInput);
 
-      const result = isPalindrome(numPa);
-      if (result === numPa) {
-        alert("This number is a palindrome");
-      } else {
-        alert("This number is not a palindrome");
+      for (let i = 0; i < numLen; i++) {
+        let digit = numbers % 10;
+        reverse += digit;
+        numbers = Math.floor(numbers / 10);
       }
-    });
 
-    const isPalindrome = (num) => {
-  let reverse = '';
-  const numLen = num.length; // Get the length of the number
-  for (let i = numLen - 1; i >= 0; i--) {
-    if (num[i] !== '0') {
-      reverse += num[i];
+      if (numPaInput === reverse) {
+        alert("Palindrome");
+      } else {
+        alert("Not a palindrome");
+      }
     }
-  }
-  return reverse === num;
-}
-    
-
-
   </script>
 </body>
-
 </html>
