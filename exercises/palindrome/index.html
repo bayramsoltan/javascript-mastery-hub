@@ -1,92 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Palindrome Checker</title>
 </head>
-
 <body>
   <input type="text" id="numPa">
-  <button id="btnCheck">Check</button>
+  <button onclick="checkPalindrome()">Check</button>
 
   <script>
-const numPa = document.querySelector("#numPa").value;
-    document.querySelector("#btnCheck").addEventListener("click", function () {
-      
-      const intNum = Number(numPa);
-      const result = isPalindrome(intNum);
-
-
-      if (result === intNum) {
-        alert("This number is Palindrome");
-      } else {
-        alert("This number is not Palindrome");
-      }
-    });
-      const numLen = numPa.length;
+    function checkPalindrome() {
+      const numPaInput = document.getElementById("numPa").value;
+      const numLen = numPaInput.length;
       let reverse = "";
-      let sayac = 0;
+      let numbers = Number(numPaInput);
 
-    const isPalindrome = (num) => {
-      for (let i = 0; i <= numLen - 1; i++) {
-        sayac = num % 10;
-        reverse += sayac;
-        num = Math.floor(num / 10);
-      } 
-      return reverse;
+      for (let i = 0; i < numLen; i++) {
+        let digit = numbers % 10;
+        reverse += digit;
+        numbers = Math.floor(numbers / 10);
+      }
+
+      if (numPaInput === reverse) {
+        alert("Palindrome");
+      } else {
+        alert("Not a palindrome");
+      }
     }
-
-    
-
-
-
-
-
-//     numPa = prompt("write number:");
-// let numbers = Number(numPa);
-// const numLen = numPa.length;
-// let reverse = "";
-// let sayac = 0;
-//      for (let i = 0; i <= numLen - 1; i++) {
-//         sayac = numbers % 10;
-//         reverse += sayac;
-//         numbers = Math.floor(Number(numbers / 10));
-//       }
-// console.log(reverse);
-// if(numPa === reverse){
-//   console.log('Palindrome')
-// }
-
-
-
-// numPa = prompt("write number:");
-
-// let numbers = Number(numPa);
-// const numLen = numPa.length;
-// let reverse = "";
-// let sayac = 0;
-//      for (let i = 0; i <= numLen - 1; i++) {
-//         sayac = numbers % 10;
-//         reverse += sayac;
-//         numbers = Math.floor(Number(numbers / 10));
-//       }
-// console.log(reverse);
-// if(numPa === reverse){
-//   console.log('Palindrome')
-// }
-// else{
-//   console.log("not a palindrome")
-// }
-  
-
-
-
-
-
   </script>
 </body>
-
 </html>
