@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h2
+      id="saat"
+      style="
+        font-size: 40px;
+        color: crimson;
+        text-align: center;
+        border-radius: 20px;
+        border: 2px solid black;
+        display: inline-flex;
+        padding: 20px;
+        background-color: chartreuse;
+      "
+    ></h2>
+    <script>
+      const saat = document.querySelector("#saat");
+      function showTime() {
+        const timeDate = new Date();
+        const localee = timeDate.toLocaleTimeString();
+        saat.innerHTML = localee;
+      }
+      setInterval(showTime, 1000);
+    </script>
+  </body>
+</html>
