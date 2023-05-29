@@ -9,9 +9,7 @@ const btn=document.querySelector("#btn");
 btn.addEventListener("click",()=>{
    const cityName=textInput.value;
    getData(cityName).then(data => {
-       console.log(data);
        const {name,main:{temp},weather:[{description}]}=data;
-       console.log(name,temp,description);
        city.textContent +=name;
        descriptionn.textContent +=description;
        feels.textContent+=temp;
